@@ -1,3 +1,4 @@
+""" This module has a example of how to define multiple profiles  """
 from base.models import Timestamp
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
@@ -35,6 +36,11 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, Timestamp):
+    """
+    Requirements always change. So, it's recommended extend
+    the user model in the start of the projects and prevent some 
+    headache in the future.
+    """
 
     email = models.EmailField(unique=True)
     name = models.CharField(max_length=255)
