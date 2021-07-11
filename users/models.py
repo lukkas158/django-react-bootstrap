@@ -1,5 +1,5 @@
 """ This module has a example of how to define multiple profiles  """
-from base.models import Timestamp
+from common.models import Timestamp
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import BaseUserManager
